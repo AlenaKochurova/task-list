@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Список дел</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Мои задачи:</h1>
+  <div class="form-group">
+<label> Заголовок:</label>
+<input type="text" id="taskTitle" placeholder="Введите заголовок">
+  </div>
+<br><br>
+
+<div class="form-group">
+<label> Текст: </label>
+  <textarea id="taskText" placeholder="Введите текст задачи"></textarea>
+</div>
+<br>
+<label>
+  Приоритет:
+  <select id="taskPriority">
+    <option value="низкий">Низкий</option>
+    <option value="средний">Средний</option>
+    <option value="высокий">Высокий</option>
+  </select>
+</label>
+<label>
+  Дедлайн:
+  <input type="datetime-local" id="taskDeadline">
+</label>
+<button id = "addTaskBtn">Добавить задачу</button>
+<br><br>
+<h4>Фильтр приоритета:</h4>
+<div id="priorityFilters">
+  <button data-priority="низкий">Низкий </button>
+  <button data-priority="средний">Средний</button>
+  <button data-priority="высокий">Высокий</button>
+  <button data-priority="все">Все</button>
+</div>
+ 
+<div id="taskListsContainer">
+  <div id="activeTasksBlock">
+    <h2>Текущие задачи:</h2>
+    <div id="activeTasks"></div>
+  </div>
+
+  <div id="completedTasksBlock">
+    <h2>Выполненные задачи:</h2>
+    <div id="completedTasks"></div>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
